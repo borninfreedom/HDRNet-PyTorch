@@ -1,0 +1,11 @@
+datasets/*
+ckpts/
+__pycache__/
+outputs/
+stats/
+*.png
+false_color/
+ckpts_gpu/
+*.pt
+fivek_dataset.tar
+
