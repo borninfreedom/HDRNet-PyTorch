@@ -17,7 +17,7 @@ def print_params(params):
 
 def get_files(path):
     files = os.listdir(path)
-    files = [os.path.join(path, x) for x in files]
+    files = [os.path.join(path, x) for x in files if not x.endswith('DS_Store')]
     files.sort()
     return files
 

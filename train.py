@@ -52,7 +52,8 @@ def train(params, train_loader, valid_loader, model,device):
             else:
                 low = torch.div(low, 255.0)
                 full = torch.div(full, 255.0)
-            target = torch.div(target, 255.0)
+
+            target = torch.div(target, 65535.0)
 
             output = model(low, full)
             # print(f'{torch.max(output)=}')
@@ -113,7 +114,8 @@ def eval(params, valid_loader, model, device,epoch):
             else:
                 low = torch.div(low, 255.0)
                 full = torch.div(full, 255.0)
-            target = torch.div(target, 255.0)
+
+            target = torch.div(target, 65535.0)
 
             output = model(low, full)
             # print(f'{torch.max(low)=}, {torch.min(low)=}')

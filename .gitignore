@@ -8,4 +8,7 @@ false_color/
 ckpts_gpu/
 *.pt
 fivek_dataset.tar
+.DS_Store
+output*
+fivek/
 
